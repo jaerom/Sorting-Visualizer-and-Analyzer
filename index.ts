@@ -66,22 +66,22 @@ class SortingAlgorithm
 	// Makes a test case and returns it.
 	makeTestCase(length: number, outputSteps?: boolean): testCase
 	{
-			// Generate an array and sort it.
-			let array: Array<number> = this.generateArray(length);
-			let output: sortingResults = this.sort(this.makeCopy(array), outputSteps);
-			
-			// Check if sorted and same elements in both arrays.
-			let isSorted: boolean = this.isSorted(output.array);
-			let sameElements: boolean = this.sameElements(array, output.array);
-			let passed: boolean = isSorted && sameElements;
+		// Generate an array and sort it.
+		let array: Array<number> = this.generateArray(length);
+		let output: sortingResults = this.sort(this.makeCopy(array), outputSteps);
 
-			return {
-				array: array,
-				sortingOutput: output,
-				isSorted: isSorted,
-				sameElements: sameElements,
-				passed: passed
-			};
+		// Check if sorted and same elements in both arrays.
+		let isSorted: boolean = this.isSorted(output.array);
+		let sameElements: boolean = this.sameElements(array, output.array);
+		let passed: boolean = isSorted && sameElements;
+
+		return {
+			array: array,
+			sortingOutput: output,
+			isSorted: isSorted,
+			sameElements: sameElements,
+			passed: passed
+		};
 	}
 
 	// Test sorting algorithm.
